@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 id="heading">Event Details Form</h2>
+                    <p>Fill all form fields to complete the form</p>
+                    <form id="msform">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li ><strong>Personal Details</strong></li>
+                            <li id="address"><strong>Address</strong></li>
+                            <li id="finish"><strong>Event Details</strong></li>
+                          </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Basic Info:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 2</h2>
+                                    </div>
+                                </div> 
+                                <label class="fieldlabels">Name: *</label> 
+                                <input type="text" name="name" placeholder="Name" /> 
+                                <label class="fieldlabels">Age: *</label> 
+                                <input type="number" name="age" placeholder="Age" /> 
+                                <label class="fieldlabels">Gender: *</label> 
+                                <select name="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <label class="fieldlabels">Mobile Number: *</label> 
+                                <input type="text" name="mobile" placeholder="Mobile Number" />
+                            </div> 
+                            <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+
+                        <!-- Address Details -->
+                    
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Address:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 2 - 3</h2>
+                                    </div>
+                                </div> 
+                                <label class="fieldlabels">Address Line 1: *</label> 
+                                <input type="text" name="address1" placeholder="Address Line 1" /> 
+                                <label class="fieldlabels">Address Line 2: *</label> 
+                                <input type="text" name="address2" placeholder="Address Line 2" /> 
+                                <label class="fieldlabels">Pincode: *</label> 
+                                <input type="number" name="pincode" placeholder="Pincode" /> 
+                                <label class="fieldlabels">City: *</label> 
+                                <input type="text" name="city" placeholder="City" /> 
+                                <label class="fieldlabels">State: *</label> 
+                                <input type="text" name="state" placeholder="State" /> 
+                                <label class="fieldlabels">Country: *</label> 
+                                <input type="text" name="country" placeholder="Country" />
+                            </div> 
+                            <input type="button" name="next" class="next action-button" value="Next" /> 
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+
+                      <!-- Location And Timmings  -->
+
+                      <fieldset>
+                        <div class="form-card">
+                          <div class="row">
+                            <div class="col-7">
+                              <h2 class="fs-title">Event Details:</h2>
+                            </div>
+                            <div class="col-5">
+                              <h2 class="steps">Step 3 - 4</h2>
+                            </div>
+                          </div>
+                          <label class="fieldlabels">Select Event Location:</label>
+                          <select name="eventLocation">
+                            <option value="">Select Event Location</option>
+                            <option value="Location 1">Location 1</option>
+                            <option value="Location 2">Location 2</option>
+                          </select>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="checkbox-container">
+                                <input type="checkbox" name="eventTimings" value="8:00 AM" id="8am">
+                              </div>
+                              <div class="time-container">
+                                <span>8:00 AM</span>
+                              </div>
+                              <div class="checkbox-container">
+                                <input type="checkbox" name="eventTimings" value="9:00 AM" id="9am">
+                              </div>
+                              <div class="time-container">
+                                <span>9:00 AM</span>
+                              </div>
+                              <div class="checkbox-container">
+                                <input type="checkbox" name="eventTimings" value="10:00 AM" id="10am">
+                              </div>
+                              <div class="time-container">
+                                <span>10:00 AM</span>
+                              </div>
+                            </div>
+                          </div>
+                          <h2 class="fs-title">Members Attending the Event:</h2>
+                          <div class="row">
+                            <div class="col-6">
+                              <label class="fieldlabels">Name:</label>
+                              <input type="text" name="memberName" placeholder="Enter Member Name">
+                            </div>
+                            <div class="col-6">
+                              <label class="fieldlabels">Mobile Number:</label>
+                              <input type="number" name="memberMobile" placeholder="Enter Member Mobile Number">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-6">
+                              <label class="fieldlabels">Select Religion:</label>
+                              <select name="memberReligion">
+                                <option value="">Select Religion</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Christian">Christian</option>
+                                <option value="Sikh">Sikh</option>
+                              </select>
+                            </div>
+                            <div class="col-6">
+                              <label class="fieldlabels">Identity Card:</label>
+                              <input type="file" name="memberIdentityCard" accept="image/*">
+                            </div>
+                          </div>
+                        </div> 
+                        <input type="button" name="next" class="next action-button"id="msform"value="Submit" /> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                      </fieldset>
+                    <!-- final Submit -->
+
+                       <!-- ... (rest of the HTML remains the same) ... -->
+
+<!-- final Submit -->
+
+<fieldset>
+    <div class="form-card">
+        <div class="row">
+            <div class="col-7">
+                <h2 class="fs-title">Finish:</h2>
+            </div>
+            <div class="col-5">
+                <h2 class="steps">Submitted</h2>
+            </div>
+        </div> <br><br>
+        <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+        <div class="row justify-content-center">
+            <div class="col-3"> <img src="check.png" class="fit-image"> </div>
+        </div> <br><br>
+        <div class="row justify-content-center">
+            <div class="col-7 text-center">
+                <h5 class="purple-text text-center">You Have Successfully Completed the Form</h5>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<!-- ... (rest of the HTML remains the same) ... -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

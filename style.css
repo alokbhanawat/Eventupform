@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+p {
+    color: grey
+}
+
+#heading {
+    text-transform: uppercase;
+    color: #673AB7;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: left
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform input,
+#msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #673AB7;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #673AB7;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #311B92
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #673AB7;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #673AB7;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar .active {
+    color: #673AB7
+}
+
+
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f13e"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f030"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: -4px;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #673AB7
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #673AB7
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.form-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fieldlabels {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fs-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+.steps {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.action-button-previous {
+    background-color: #ccc;
+    color: #333;
+}
+
+.action-button:hover {
+    background-color: #3e8e41;
+}
+
+.action-button-previous:hover {
+    background-color: #bbb;
+}
+
+
+.event-timings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-timings input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+.event-timings label {
+    margin-right: 20px;
+}
+
+select[name="gender"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    background-color: #ECEFF1;
+}
+
+select[name="gender"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+select[name="gender"] option {
+    padding: 10px;
+}
+
+select[name="gender"] option:hover {
+    background-color: #f5f5f5;
+}
+
+select[name="gender"] option:selected {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+
+
+/* Global Styles */
+
+.form-card {
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fieldlabels {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fs-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.steps {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+.action-button-previous {
+    background-color: #ccc;
+    color: #333;
+}
+
+.action-button-previous:hover {
+    background-color: #aaa;
+    color: #333;
+}
+
+/* Select Dropdown Styles */
+
+select[name="eventLocation"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ECEFF1;
+}
+
+select[name="eventLocation"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+select[name="eventLocation"] option {
+    padding: 10px;
+}
+
+select[name="eventLocation"] option:hover {
+    background-color: #f5f5f5;
+}
+
+select[name="eventLocation"] option:selected {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+/* Checkbox Styles */
+
+input[type="checkbox"] {
+    margin: 10px;
+}
+
+/* Media Queries for Different Devices */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .form-card {
+        padding: 30px;
+    }
+    .fieldlabels {
+        font-size: 16px;
+    }
+    .fs-title {
+        font-size: 20px;
+    }
+    .steps {
+        font-size: 16px;
+    }
+    .action-button {
+        padding: 10px 15px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .form-card {
+        padding: 20px;
+    }
+    .fieldlabels {
+        font-size: 14px;
+    }
+    .fs-title {
+        font-size: 18px;
+    }
+    .steps {
+        font-size: 14px;
+    }
+    .action-button {
+        padding: 10px 10px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .form-card {
+        padding: 15px;
+    }
+    .fieldlabels {
+        font-size: 12px;
+    }
+    .fs-title {
+        font-size: 16px;
+    }
+    .steps {
+        font-size: 12px;
+    }
+    .action-button {
+        padding: 10px 5px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    .form-card {
+        padding: 10px;
+    }
+    .fieldlabels {
+        font-size: 10px;
+    }
+    .fs-title {
+        font-size: 14px;
+    }
+    .steps {
+        font-size: 10px;
+    }
+    .action-button {
+        padding: 10px 2px;
+    }
+}
+
+.checkbox-container {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox-container label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.fit-image {
+    width: 66px;
+    height: 55px;
+    object-fit: cover;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.rectangle-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+
+  .progress {
+    width: 50%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto; /* Add this line to center the progress bar horizontally */
+  }
+  
+  .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #7700df;
+    transition: width 0.5s ease-in-out;
+  }
+  .purple-text {
+    color: purple; /* assuming you want the text to be purple */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .success-message {
+    margin-top: 20px; /* adjust the value to move it downwards as needed */
+  }
+  
+  .success-message h2 {
+    margin-bottom: 0; /* remove the default margin-bottom of h2 */
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .checkbox-container label {
+    font-size: 16px;
+  }
+
+  .checkbox-container {
+    display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+  }
+  
+  .time-container {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  
